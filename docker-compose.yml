@@ -1,0 +1,22 @@
+version: "3"
+services:
+    smq-core:
+        container_name: smq-core
+        build:
+            context: .\SMQ-Core
+            dockerfile: DockerFile
+        ports:
+            - "3002:3002"
+        environment:
+            - SMQ_CONNECTIONSTRING=Server=sqlserver;Database=smq;User Id=smq;Password=smq;
+            - SMQ_KEY=xtPcL81m6tse6LDN/GZgIC6RR+ZEabF+7hhJ32BqehQ=
+            - SMQ_ISSUER=SMQ-Core.com
+        networks: 
+            - api
+            - default
+networks:
+    api:
+        driver: bridge
+    default:
+        external:
+            name: sqlserver_default

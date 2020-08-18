@@ -1,0 +1,33 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:52482",
+      "sslPort": 0
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "SMQ_ISSUER": "SMQ-Core.Com",
+        "SMQ_KEY": "xtPcL81m6tse6LDN/GZgIC6RR+ZEabF+7hhJ32BqehQ=",
+        "SMQ_CONNECTIONSTRING": "Server=localhost;Database=smq;User Id=smq;Password=smq;",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "SMQ_Core": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "weatherforecast",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}
