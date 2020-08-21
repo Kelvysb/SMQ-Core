@@ -1,0 +1,133 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+:root {
+    --base-color: #0010bf;
+    --back-color: #d1d1d1;
+    --light-font-color: #d0d0d0;
+    --dark-font-color: #1a1a1a;
+    --error-popup: lightyellow;
+    --active-menu: rgba(255,255,255,0.25);
+    --selected-menu: rgba(255,255,255,0.25);
+}
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--back-color);
+    color: var(--light-font-color);
+}
+
+app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+}
+
+.sidebar {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.side-menu {
+    background-color: var(--base-color);
+    height: 100vh;
+    margin: 0;
+}
+
+    .side-menu .button .icon {
+        width: 25px;
+    }
+
+    .side-menu .menu-icon {
+        width: 1.5rem;
+        font-size: 1.1rem;
+        vertical-align: text-top;
+        top: -2px;
+    }
+
+    .side-menu .nav-item {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
+
+        .side-menu .nav-item:first-of-type {
+            padding-top: 1rem;
+        }
+
+        .side-menu .nav-item:last-of-type {
+            padding-bottom: 1rem;
+        }
+
+        .side-menu .nav-item a {
+            color: #d7d7d7;
+            border-radius: 4px;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            line-height: 2rem;
+        }
+
+            .side-menu .nav-item a.active {
+                background-color: var(--active-menu);
+                color: white;
+            }
+
+            .side-menu .nav-item a:hover {
+                background-color: var(--selected-menu);
+                color: white;
+            }
+
+.content {
+    padding-top: 1.1rem;
+}
+
+#blazor-error-ui {
+    background: var(--error-popup);
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        width: 56px;
+    }
+
+    .menu-text {
+        display: none;
+    }
+
+    .nav-item {
+        width: 56px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .menu-text {
+        display: inline-block;
+    }
+
+    .nav-item {
+        width: 200px;
+    }
+}

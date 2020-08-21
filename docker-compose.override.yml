@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  smqcore:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "52482"
